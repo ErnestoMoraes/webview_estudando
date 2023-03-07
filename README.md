@@ -1,6 +1,6 @@
 # webview - documentação PT_BR
 
-1. Instalando um WebViewController:
+### 1. Instalando um WebViewController:
 ```
 controller = WebViewController()
 ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -24,12 +24,12 @@ controller = WebViewController()
 ..loadRequest(Uri.parse('https://flutter.dev'));
  ```
 
-2. Usando o Controller:
+### 2. Usando o Controller:
 ```
 WebViewWidget(controller: controller)
 ```
 
-3. Verificar se minSdkVersion é >= 19:
+### 3. Verificar se minSdkVersion é >= 19:
 
  > path: android/app/build.gradle
 
@@ -39,7 +39,7 @@ defaultConfig {
 } 
 ```
 
-4. Para acessar serviços especificos
+### 4. Para acessar serviços especificos
 
 Import for Android features.
 ```
@@ -62,30 +62,37 @@ import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 Abaixo está uma lista não exaustiva de mudanças na API:
 
- -``` ```WebViewController.clearCache``` não limpa mais o armazenamento local. Por favor, use ```WebViewController.clearLocalStorage```.
- - ```WebViewController.clearCache``` no longer reloads the page.
- - ```WebViewController.loadUrl``` has been removed. Please use ```WebViewController.loadRequest```.
- - ```WebViewController.evaluateJavascript``` has been removed. Please use WebViewController.runJavaScript or ```WebViewController.runJavaScriptReturningResult```.
- - ```WebViewController.getScrollX``` and WebViewController.getScrollY have been removed and have been replaced by ```WebViewController.getScrollPosition```.
- - ```WebViewController.runJavaScriptReturningResult``` now returns an Object and not a String. This will attempt to return a bool or num if the return value can ```be parsed```.
- - ```CookieManager is``` replaced ```by WebViewCookieManager```.
- - ```NavigationDelegate.onWebResourceError``` callback includes errors that are not from the main frame. Use the WebResourceError.isForMainFrame field to filter errors.
- > The following fields from WebView have been moved to NavigationDelegate. They can be added to a WebView with ```WebViewController.setNavigationDelegate```.
+ - ```WebViewController.clearCache``` não limpa mais o armazenamento local. Por favor, use ```WebViewController.clearLocalStorage```.
+ - ```WebViewController.clearCache``` não recarrega mais a página.
+ - ```WebViewController.loadUrl``` foi removido. Por favor, use ```WebViewController.loadRequest```.
+ - ```WebViewController.evaluateJavascript``` foi removido. Use WebViewController.runJavaScript or ```WebViewController.runJavaScriptReturningResult```.
+ - ```WebViewController.getScrollX``` and ```WebViewController.getScrollY``` foram removidos e substituídos por ```WebViewController.getScrollPosition```.
+ - ```WebViewController.runJavaScriptReturningResult``` agora retorna um Object e não um String.  Isso tentará retornar um bool ou num se o valor de retorno puder ser analisado.
+ - ```CookieManager ``` é substituído por ```WebViewCookieManager```.
+ - ```NavigationDelegate.onWebResourceError``` inclui erros que não são do quadro principal. Use o ```WebResourceError.isForMainFrame``` field to filter errors.
+ 
+ > Os seguintes campos de WebView foram movidos para ```NavigationDelegate```. Eles podem ser adicionados a um WebView com ```WebViewController.setNavigationDelegate```:
+
+
  - ```WebView.navigationDelegate``` -> ```NavigationDelegate.onNavigationRequest```
  - ```WebView.onPageStarted``` -> ```NavigationDelegate.onPageStarted```
  - ```WebView.onPageFinished``` -> ```NavigationDelegate.onPageFinished```
  - ```WebView.onProgress``` -> ```NavigationDelegate.onProgress```
  - ```WebView.onWebResourceError``` -> NavigationDelegate.onWebResourceError
- > The following fields from WebView have been moved ```to WebViewController```:
+
+
+ > Os seguintes campos de WebViewforam movidos para ```WebViewController```:
+
+
  - ```WebView.javascriptMode``` -> ```WebViewController.setJavaScriptMode```
  - ```WebView.javascriptChannels``` -> WebViewController.addJavaScriptChannel/```WebViewController.removeJavaScriptChannel```
  - ```WebView.zoomEnabled``` -> ```WebViewController.enableZoom```
  - ```WebView.userAgent``` -> ```WebViewController.setUserAgent```
- - ```WebView.backgroundColor``` -> WebViewController.setBackgroundColor
- > The following features have been moved to an Android implementation class. See section Platform-Specific Features for details on accessing Android platform-```specific features```.
+ - ```WebView.backgroundColor``` -> ```WebViewController.setBackgroundColor```
+ > Os recursos a seguir foram movidos para uma classe de implementação do Android. Consulte a seção ```Platform-Specific Features``` obter detalhes sobre como acessar os recursos específicos da plataforma Android.
+
+
  - ```WebView.debuggingEnabled``` -> static ```AndroidWebViewController.enableDebugging```
- - ```WebView.initialMediaPlaybackPolicy``` -> AndroidWebViewController.setMediaPlaybackRequiresUserGesture
- > The following features have been moved to an iOS implementation class. See section Platform-Specific Features for details on accessing iOS platform-```specific features```.
- - ```WebView.gestureNavigationEnabled``` -> ```WebKitWebViewController.setAllowsBackForwardNavigationGestures```
- - ```WebView.initialMediaPlaybackPolicy``` -> ```WebKitWebViewControllerCreationParams.mediaTypesRequiringUserAction```
- - ```WebView.allowsInlineMediaPlayback``` -> ```WebKitWebViewControllerCreationParams.allowsInlineMediaPlayback```
+ - ```WebView.initialMediaPlaybackPolicy``` -> ```AndroidWebViewController.setMediaPlaybackRequiresUserGesture```.
+
+
