@@ -1,16 +1,56 @@
-# webview
+# webview - documentação PT_BR
 
-A new Flutter project.
+1. Instalando um WebViewController:
+```
+controller = WebViewController()
+..setJavaScriptMode(JavaScriptMode.unrestricted)
+..setBackgroundColor(const Color(0x00000000))
+..setNavigationDelegate(
+    NavigationDelegate(
+    onProgress: (int progress) {
+        // Update loading bar.
+    },
+    onPageStarted: (String url) {},
+    onPageFinished: (String url) {},
+    onWebResourceError: (WebResourceError error) {},
+    onNavigationRequest: (NavigationRequest request) {
+        if (request.url.startsWith('https://www.youtube.com/')) {
+        return NavigationDecision.prevent;
+        }
+        return NavigationDecision.navigate;
+    },
+    ),
+)
+..loadRequest(Uri.parse('https://flutter.dev'));
+ ```
 
-## Getting Started
+2. Usando o Controller:
+```
+WebViewWidget(controller: controller)
+```
 
-This project is a starting point for a Flutter application.
+3. Verificar se minSdkVersion é >= 19:
 
-A few resources to get you started if this is your first Flutter project:
+ | path: android/app/build.gradle
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+defaultConfig {
+    minSdkVersion 19
+} 
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Para acessar serviços especificos
+
+Import for Android features.
+```
+import 'package:webview_flutter_android/webview_flutter_android.dart';
+```
+Import for iOS features.
+```
+import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+```
+
+# Migração 3.0 para 4.0
+
+ | Na versão 3.0 e abaixo, WebViewControllersó poderia ser recuperado em um retorno de chamada depois que WebViewfosse adicionado à árvore de widgets. Agora, WebViewControllerdeve ser instanciado e pode ser usado antes de ser adicionado à árvore de widgets. Consulte Usagea seção acima para obter um exemplo.
+
