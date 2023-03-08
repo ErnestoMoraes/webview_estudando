@@ -96,80 +96,80 @@ Abaixo está uma lista não exaustiva de mudanças na API:
  - ```WebView.initialMediaPlaybackPolicy``` -> ```AndroidWebViewController.setMediaPlaybackRequiresUserGesture```.
 
 ## Metodos
- > addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → Future<void>
+ > addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → ```Future<void>```
  - Adiciona um novo canal JavaScript ao conjunto de canais ativados.
 
- - canGoBack() → Future<bool>
-Verifica se há um item de histórico anterior.
+ > canGoBack() → ```Future<bool>```
+ - Verifica se há um item de histórico anterior.
 
- - canGoForward() → Future<bool>
-Verifica se há um item de histórico de encaminhamento.
+ > canGoForward() → ```Future<bool>```
+ - Verifica se há um item de histórico de encaminhamento.
 
-clearCache() → Future<void>
-Limpa todos os caches usados ​​pelo WebView.
+ > clearCache() → ```Future<void>```
+ - Limpa todos os caches usados ​​pelo WebView.
 
-clearLocalStorage() → Future<void>
-Limpa o armazenamento local usado pelo WebView.
+ > clearLocalStorage() → ```Future<void>```
+ - Limpa o armazenamento local usado pelo WebView.
 
-currentUrl() → Future<String?>
-Retorna a URL atual que o WebView está exibindo.
+ > currentUrl() → ```Future<String?>```
+ - Retorna a URL atual que o WebView está exibindo.
 
-enableZoom(bool enabled) → Future<void>
-Se o zoom deve ser compatível com os controles e gestos de zoom na tela.
+ > enableZoom(bool enabled) → ```Future<void>```
+ - Se o zoom deve ser compatível com os controles e gestos de zoom na tela.
 
-getScrollPosition() → Future<Offset>
-Retorna a posição de rolagem atual desta exibição.
+ > getScrollPosition() → ```Future<Offset>```
+ - Retorna a posição de rolagem atual desta exibição.
 
-getTitle() → Future<String?>
-O título da página atualmente carregada.
+ > getTitle() → ```Future<String?>```
+ - O título da página atualmente carregada.
 
-goBack() → Future<void>
-Volta na história deste WebView.
+ > goBack() → ```Future<void>```
+ - Volta na história deste WebView.
 
-goForward() → Future<void>
-Avança na história deste WebView.
+ > goForward() → ```Future<void>```
+ - Avança na história deste WebView.
 
-loadFile(String absoluteFilePath) → Future<void>
-Carrega o arquivo localizado no arquivo absoluteFilePath
+ > loadFile(String absoluteFilePath) → ```Future<void>```
+ - Carrega o arquivo localizado no arquivo absoluteFilePath
 
-loadFlutterAsset(String key) → Future<void>
-Carrega o recurso Flutter especificado no arquivo pubspec.yaml.
+ > loadFlutterAsset(String key) → ```Future<void>```
+ - Carrega o recurso Flutter especificado no arquivo pubspec.yaml.
 
-loadHtmlString(String html, {String? baseUrl}) → Future<void>
-Carrega a string HTML fornecida
+ > loadHtmlString(String html, {String? baseUrl}) → ```Future<void>```
+ - Carrega a string HTML fornecida
 
-loadRequest(Uri uri, {LoadRequestMethod method = LoadRequestMethod.get, Map<String, String> headers = const <String, String>{}, Uint8List? body}) → Future<void>
-Faz uma solicitação HTTP específica e carrega a resposta no webview.
+ > loadRequest(Uri uri, {LoadRequestMethod method = LoadRequestMethod.get, Map<String, String> headers = const <String, String>{}, Uint8List body}) → ```Future<void>```
+ - Faz uma solicitação HTTP específica e carrega a resposta no webview.
 
-noSuchMethod(Invocation invocation) → dynamic
-Chamado quando um método ou propriedade inexistente é acessado
+ > noSuchMethod(Invocation invocation) → dynamic
+ - Chamado quando um método ou propriedade inexistente é acessado
 
-reload() → Future<void>
-Recarrega o URL atual.
+ > reload() → ```Future<void>```
+ - Recarrega o URL atual.
 
-removeJavaScriptChannel(String javaScriptChannelName) → Future<void>
-Remove o canal JavaScript com o nome correspondente do conjunto de canais ativados.
+ > removeJavaScriptChannel(String javaScriptChannelName) → ```Future<void>```
+ - Remove o canal JavaScript com o nome correspondente do conjunto de canais ativados.
 
-runJavaScript(String javaScript) → Future<void>
-Executa o JavaScript fornecido no contexto da página atual.
+ > runJavaScript(String javaScript) → ```Future<void>```
+ - Executa o JavaScript fornecido no contexto da página atual.
 
-runJavaScriptReturningResult(String javaScript) → Future<Object>
-Executa o JavaScript fornecido no contexto da página atual e retorna o resultado.
+ > runJavaScriptReturningResult(String javaScript) → ```Future<Object>```
+ - Executa o JavaScript fornecido no contexto da página atual e retorna o resultado.
 
-scrollBy(int x, int y) → Future<void>
-Move a posição de rolagem desta visualização.
+ > scrollBy(int x, int y) → ```Future<void>```
+ - Move a posição de rolagem desta visualização.
 
-scrollTo(int x, int y) → Future<void>
-Define a posição de rolagem desta visualização.
+ > scrollTo(int x, int y) → ```Future<void>```
+ - Define a posição de rolagem desta visualização.
 
-setBackgroundColor(Color color) → Future<void>
-Define a cor de fundo atual desta exibição.
+ > setBackgroundColor(Color color) → ```Future<void>```
+ - Define a cor de fundo atual desta exibição.
 
-setJavaScriptMode(JavaScriptMode javaScriptMode) → Future<void>
-Define o modo de execução do JavaScript a ser usado pelo WebView.
+ > setJavaScriptMode(JavaScriptMode javaScriptMode) → ```Future<void>```
+ - Define o modo de execução do JavaScript a ser usado pelo WebView.
 
-setNavigationDelegate(NavigationDelegate delegate) → Future<void>
-Define o NavigationDelegate contendo os métodos de retorno de chamada que são chamados durante os eventos de navegação.
+ > setNavigationDelegate(NavigationDelegate delegate) → ```Future<void>```
+ - Define o NavigationDelegate contendo os métodos de retorno de chamada que são chamados durante os eventos de navegação.
 
-setUserAgent(String? userAgent) → Future<void>
-Define o valor usado para o User-Agent: request header. (da solicitação HTTP).
+ > setUserAgent(String? userAgent) → ```Future<void>```
+ - Define o valor usado para o User-Agent: request header. (da solicitação HTTP).
