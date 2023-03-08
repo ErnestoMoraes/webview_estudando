@@ -95,7 +95,7 @@ Abaixo está uma lista não exaustiva de mudanças na API:
  - ```WebView.debuggingEnabled``` -> static ```AndroidWebViewController.enableDebugging```
  - ```WebView.initialMediaPlaybackPolicy``` -> ```AndroidWebViewController.setMediaPlaybackRequiresUserGesture```.
 
-## Metodos
+# 🔁 Metodos
 ### addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → ```Future<void>```
   Adiciona um novo canal JavaScript ao conjunto de canais ativados.
 
