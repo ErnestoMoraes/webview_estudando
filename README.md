@@ -96,8 +96,8 @@ Abaixo está uma lista não exaustiva de mudanças na API:
  - ```WebView.initialMediaPlaybackPolicy``` -> ```AndroidWebViewController.setMediaPlaybackRequiresUserGesture```.
 
 ## Metodos
- - addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → Future<void>
- > Adiciona um novo canal JavaScript ao conjunto de canais ativados.
+ > addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → Future<void>
+ - Adiciona um novo canal JavaScript ao conjunto de canais ativados.
 
  - canGoBack() → Future<bool>
 Verifica se há um item de histórico anterior.
