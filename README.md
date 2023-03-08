@@ -97,79 +97,79 @@ Abaixo está uma lista não exaustiva de mudanças na API:
 
 ## Metodos
 ### addJavaScriptChannel(String name, {required void onMessageReceived(JavaScriptMessage)}) → ```Future<void>```
- - Adiciona um novo canal JavaScript ao conjunto de canais ativados.
+  Adiciona um novo canal JavaScript ao conjunto de canais ativados.
 
 ### canGoBack() → ```Future<bool>```
- - Verifica se há um item de histórico anterior.
+  Verifica se há um item de histórico anterior.
 
 ### canGoForward() → ```Future<bool>```
- - Verifica se há um item de histórico de encaminhamento.
+  Verifica se há um item de histórico de encaminhamento.
 
 ### clearCache() → ```Future<void>```
- - Limpa todos os caches usados ​​pelo WebView.
+  Limpa todos os caches usados ​​pelo WebView.
 
 ### clearLocalStorage() → ```Future<void>```
- - Limpa o armazenamento local usado pelo WebView.
+  Limpa o armazenamento local usado pelo WebView.
 
 ### currentUrl() → ```Future<String?>```
- - Retorna a URL atual que o WebView está exibindo.
+  Retorna a URL atual que o WebView está exibindo.
 
 ### enableZoom(bool enabled) → ```Future<void>```
- - Se o zoom deve ser compatível com os controles e gestos de zoom na tela.
+  Se o zoom deve ser compatível com os controles e gestos de zoom na tela.
 
 ### getScrollPosition() → ```Future<Offset>```
- - Retorna a posição de rolagem atual desta exibição.
+  Retorna a posição de rolagem atual desta exibição.
 
 ### getTitle() → ```Future<String?>```
- - O título da página atualmente carregada.
+  O título da página atualmente carregada.
 
 ### goBack() → ```Future<void>```
- - Volta na história deste WebView.
+  Volta na história deste WebView.
 
 ### goForward() → ```Future<void>```
- - Avança na história deste WebView.
+  Avança na história deste WebView.
 
 ### loadFile(String absoluteFilePath) → ```Future<void>```
- - Carrega o arquivo localizado no arquivo absoluteFilePath
+  Carrega o arquivo localizado no arquivo absoluteFilePath
 
 ### loadFlutterAsset(String key) → ```Future<void>```
- - Carrega o recurso Flutter especificado no arquivo pubspec.yaml.
+  Carrega o recurso Flutter especificado no arquivo pubspec.yaml.
 
 ### loadHtmlString(String html, {String? baseUrl}) → ```Future<void>```
- - Carrega a string HTML fornecida
+  Carrega a string HTML fornecida
 
 ### loadRequest(Uri uri, {LoadRequestMethod method = LoadRequestMethod.get, Map<String, String> headers = const <String, String>{}, Uint8List body}) → ```Future<void>```
- - Faz uma solicitação HTTP específica e carrega a resposta no webview.
+  Faz uma solicitação HTTP específica e carrega a resposta no webview.
 
 ### noSuchMethod(Invocation invocation) → dynamic
- - Chamado quando um método ou propriedade inexistente é acessado
+  Chamado quando um método ou propriedade inexistente é acessado
 
 ### reload() → ```Future<void>```
- - Recarrega o URL atual.
+  Recarrega o URL atual.
 
 ### removeJavaScriptChannel(String javaScriptChannelName) → ```Future<void>```
- - Remove o canal JavaScript com o nome correspondente do conjunto de canais ativados.
+  Remove o canal JavaScript com o nome correspondente do conjunto de canais ativados.
 
 ### runJavaScript(String javaScript) → ```Future<void>```
- - Executa o JavaScript fornecido no contexto da página atual.
+  Executa o JavaScript fornecido no contexto da página atual.
 
 ### runJavaScriptReturningResult(String javaScript) → ```Future<Object>```
- - Executa o JavaScript fornecido no contexto da página atual e retorna o resultado.
+  Executa o JavaScript fornecido no contexto da página atual e retorna o resultado.
 
 ### scrollBy(int x, int y) → ```Future<void>```
- - Move a posição de rolagem desta visualização.
+  Move a posição de rolagem desta visualização.
 
 ### scrollTo(int x, int y) → ```Future<void>```
- - Define a posição de rolagem desta visualização.
+  Define a posição de rolagem desta visualização.
 
 ### setBackgroundColor(Color color) → ```Future<void>```
- - Define a cor de fundo atual desta exibição.
+  Define a cor de fundo atual desta exibição.
 
 ### setJavaScriptMode(JavaScriptMode javaScriptMode) → ```Future<void>```
- - Define o modo de execução do JavaScript a ser usado pelo WebView.
+  Define o modo de execução do JavaScript a ser usado pelo WebView.
 
 ### setNavigationDelegate(NavigationDelegate delegate) → ```Future<void>```
- - Define o NavigationDelegate contendo os métodos de retorno de chamada que são chamados durante os eventos de navegação.
+  Define o NavigationDelegate contendo os métodos de retorno de chamada que são chamados durante os eventos de navegação.
 
 ### setUserAgent(String? userAgent) → ```Future<void>```
- - Define o valor usado para o User-Agent: request header. (da solicitação HTTP).
+  Define o valor usado para o User-Agent: request header. (da solicitação HTTP).
